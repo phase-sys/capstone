@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_maps"
+        android:name="com.phase.capstone.main.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+        <argument
+            android:name="userNickname"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.phase.capstone.main.home.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_homeConnection"
+            app:destination="@id/homeConnection" />
+        <action
+            android:id="@+id/action_navigation_home_to_homeMain"
+            app:destination="@id/homeMain" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.phase.capstone.main.profile.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_authActivity"
+            app:destination="@id/authActivity" />
+        <argument
+            android:name="userId"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+        <argument
+            android:name="userNickname"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_navigation_profile_to_navigation_maps"
+            app:destination="@id/navigation_maps" />
+        <action
+            android:id="@+id/action_navigation_profile_to_profileDetails"
+            app:destination="@id/profileDetails" />
+    </fragment>
+    <activity
+        android:id="@+id/authActivity"
+        android:name="com.phase.capstone.auth.AuthActivity"
+        android:label="activity_auth"
+        tools:layout="@layout/activity_auth" />
+    <fragment
+        android:id="@+id/homeConnection"
+        android:name="com.phase.capstone.main.home.HomeConnection"
+        android:label="fragment_home_connection"
+        tools:layout="@layout/fragment_home_connection" >
+        <argument
+            android:name="connectionState"
+            app:argType="string" />
+        <argument
+            android:name="groupId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeMain"
+        android:name="com.phase.capstone.main.home.HomeMain"
+        android:label="fragment_home_main"
+        tools:layout="@layout/fragment_home_main" >
+        <action
+            android:id="@+id/action_homeMain_to_homeConnection"
+            app:destination="@id/homeConnection" />
+        <action
+            android:id="@+id/action_homeMain_to_navigation_profile"
+            app:destination="@id/navigation_profile"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_edit"
+        android:name="com.phase.capstone.auth.Register"
+        android:label="fragment_profile_edit"
+        tools:layout="@layout/fragment_register" >
+        <argument
+            android:name="isEdit"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <action
+            android:id="@+id/action_profile_edit_to_authActivity"
+            app:destination="@id/authActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileDetails"
+        android:name="com.phase.capstone.main.profile.ProfileDetails"
+        android:label="fragment_profile_details"
+        tools:layout="@layout/fragment_profile_details">
+        <argument
+            android:name="userId"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+        <argument
+            android:name="userNickname"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+        <argument
+            android:name="allowEditProfile"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_profileDetails_to_profile_edit"
+            app:destination="@id/profile_edit" />
+    </fragment>
+
+</navigation>

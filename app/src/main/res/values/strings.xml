@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">hanApp</string>
+
+    <string name="home">Home</string>
+    <string name="location">Location</string>
+    <string name="profile">Profile</string>
+
+    <string name="facebook_app_id">FB_APP_ID</string>
+    <string name="facebook_client_token">FB_TOKEN</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

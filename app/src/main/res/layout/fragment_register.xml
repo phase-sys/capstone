@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.Register">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvSignUpTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Sign Up"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnPrimary"
+                android:background="?attr/colorPrimary"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+            <TextView
+                android:id="@+id/tvAccountInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Information"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvEmailHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etSignUpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="example@email.com"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
+
+            <Space
+                android:id="@+id/spcEmail"
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <LinearLayout
+                android:id="@+id/layPassword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvOldPasswordHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Current Password"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+                <EditText
+                    android:id="@+id/etSignUpOldPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Current Password"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvPasswordHint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etSignUpPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Input more than 8 characters"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp" />
+
+                <Switch
+                    android:id="@+id/switchShowPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:minHeight="48dp"
+                    android:text="Show Password"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAccountType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Account Type"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radDependent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:checked="true"
+                    android:text="Dependent" />
+
+                <RadioButton
+                    android:id="@+id/radGuardian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guardian" />
+
+            </RadioGroup>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <TextView
+                android:id="@+id/tvPersonalInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvNicknameHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nickname"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etNickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Your nickname (9 letters max)"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:maxLength="9"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvFirstNameHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="What is your first name?"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvMiddleNameHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Middle Name"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etMiddleName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="What is your middle name?"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvLastNameHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="What is your last name?"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvGenderHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="What gender do you identify as?"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvContactNumberHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Number"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etContactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="09XXXXXXXXX"
+                android:inputType="number"
+                android:maxLength="11"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvAddressHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Where do you live?"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <TextView
+                android:id="@+id/tvPhysicalDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Physical Description"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/tvHairColorHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hair Color"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etHairColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="What is the color of your hair?"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvEyeColorHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eye Color"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etEyeColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="What is the color of your eyes?"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvScarsHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Scars"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etScars"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Description of Scars (such as a scar on the hand, legs, etc.)"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvMarksHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Marks"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etMarks"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Description of Marks (such as moles, freckles, burn marks, etc.)"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="4dp" />
+
+            <TextView
+                android:id="@+id/tvTattoosHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tattoos"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etTattoos"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Description of Tattoos (such as tattoo of a cross or a dragon)"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <TextView
+                android:id="@+id/tvMedicalDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medical Description"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"  />
+
+            <TextView
+                android:id="@+id/tvMedicalStatusHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medical Status"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etMedicalStatus"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Describe your medical status"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:text="Sign Up" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

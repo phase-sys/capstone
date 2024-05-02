@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "545137563904",
+    "firebase_url": "https://capstoneproject-8478a-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "capstoneproject-8478a",
+    "storage_bucket": "capstoneproject-8478a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545137563904:android:d5349355e8507a572dfbe5",
+        "android_client_info": {
+          "package_name": "com.phase.capstone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545137563904-7bd49vago3eq912931teae3gs8c483b9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHn3a1sD5QdxKO89ULCFFiPbBU-bOF_jY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545137563904-7bd49vago3eq912931teae3gs8c483b9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
