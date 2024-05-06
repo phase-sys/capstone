@@ -15,7 +15,7 @@ class MessageHandler {
 
     companion object {
         const val BASE_URL = "https://fcm.googleapis.com/fcm/send"
-        const val SERVER_KEY = "key=AAAAfuy7GQA:APA91bED6AgorILLaiL-LUQiZB2jlx-CaoVH_ecg0grDYcyevTwUxIEJBXEK_DFQJPhQOpuT7skcAsKB2EcHhGzDHmCM_qn-YKplsEuY4lKPalDW7me1NirqZ-s9LMOYFWzNL2omOOs8"
+        const val SERVER_KEY = "key=TESTGIT"
     }
 
     fun sendMessage(context: Context, token: String, sender: String, message: String, etMessage: EditText) {
